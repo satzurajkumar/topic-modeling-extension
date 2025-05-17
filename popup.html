@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Topic Discoverer</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="dist/output.css" />
+		<!-- <script src="./tailwind_417.js"></script> -->
+		<style>
+			body {
+				font-family: "Inter", sans-serif;
+				width: 300px; /* Fixed width for the popup */
+				min-height: 150px; /* Minimum height */
+			}
+			/* Custom scrollbar for results if they overflow */
+			#results::-webkit-scrollbar {
+				width: 8px;
+			}
+			#results::-webkit-scrollbar-track {
+				background: #f1f1f1;
+				border-radius: 10px;
+			}
+			#results::-webkit-scrollbar-thumb {
+				background: #888;
+				border-radius: 10px;
+			}
+			#results::-webkit-scrollbar-thumb:hover {
+				background: #555;
+			}
+		</style>
+	</head>
+	<body class="bg-slate-50 text-slate-800 p-4">
+		<div class="container mx-auto">
+			<h1 class="text-xl font-bold text-center text-blue-600 mb-3">
+				Topic Discoverer
+			</h1>
+
+			<button
+				id="analyzeButton"
+				class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+			>
+				Analyze Page
+			</button>
+
+			<div id="status" class="mt-3 text-sm text-slate-600 text-center">
+				Click the button to analyze the current page.
+			</div>
+
+			<div id="resultsContainer" class="mt-3 hidden">
+				<h2 class="text-md font-semibold text-slate-700 mb-1">
+					Potential Keywords:
+				</h2>
+				<ul
+					id="results"
+					class="list-disc list-inside bg-white p-3 rounded-lg shadow text-sm max-h-40 overflow-y-auto"
+				></ul>
+			</div>
+
+			<div
+				id="error"
+				class="mt-3 text-sm text-red-600 hidden p-2 bg-red-100 rounded-md"
+			></div>
+		</div>
+		<script src="popup.js"></script>
+	</body>
+</html>
