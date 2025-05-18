@@ -1,9 +1,10 @@
 {
 	"manifest_version": 3,
-	"name": "Topic Discoverer",
-	"version": "1.0",
-	"description": "Analyzes the current webpage to suggest its main topic or theme using basic text analysis.",
+	"name": "TL;DR Pro",
+	"version": "1.1",
+	"description": "Analyzes webpage topics using a Python backend with spaCy NLP.",
 	"permissions": ["activeTab", "scripting"],
+	"host_permissions": ["http://127.0.0.1:5000/*"],
 	"action": {
 		"default_popup": "popup.html",
 		"default_icon": {
