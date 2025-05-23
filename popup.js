@@ -45,7 +45,7 @@ const logoutButton = document.getElementById("logoutButton");
 const loggedInUserP = document.getElementById("loggedInUser");
 
 // --- API Configuration ---
-const BASE_API_URL = "http://127.0.0.1:8000"; // Ensure this matches your backend
+const BASE_API_URL = "http://127.0.0.1:8000"; // Ensure to update this backend url
 const TOKEN_STORAGE_KEY = "topicDiscovererToken";
 const USERNAME_STORAGE_KEY = "topicDiscovererUsername";
 
@@ -194,9 +194,9 @@ function displayAuthStatusMessage(message, isError) {
 		authStatus.classList.add("text-red-500");
 		authStatus.classList.remove("text-green-500");
 	} else {
-		// For non-error messages, you might want a neutral color or green
+		n;
 		authStatus.classList.remove("text-red-500");
-		// authStatus.classList.add('text-green-500'); // Or remove this for neutral
+		// authStatus.classList.add('text-green-500');
 	}
 }
 
